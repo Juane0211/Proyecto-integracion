@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resource;
-use Illuminate\Inertia;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
