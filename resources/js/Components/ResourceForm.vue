@@ -1,16 +1,22 @@
-<script setup>   
+<script setup>
+import { Axios } from "axios";   
 import { ref }   from "vue";
 
 let title=ref('');
-let decription=ref('');
+let description=ref('');
 let link=ref('');
 
 function createResource() {
-    console.log ("Creando recurso...");
-    console.log (title.value);
-    console.log (decription.value);
-    console.log (link.value);
-    
+  axios
+  .post ("/api/resources", {
+    title: title.value,
+    description: description.value,
+    link: description.value,
+
+  })
+  .then((response) => {
+    console.log(response);
+  });
 }
 
 </script>
